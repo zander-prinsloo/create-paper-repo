@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  paperrepo: paperrepo.html
+last_built: 2026-08-03T18:25Z
+urls:
+  reference: https://zander-prinsloo.github.io/create-paper-repo/reference
+  article: https://zander-prinsloo.github.io/create-paper-repo/articles
