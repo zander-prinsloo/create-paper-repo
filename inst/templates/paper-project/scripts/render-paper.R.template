@@ -1,0 +1,17 @@
+#!/usr/bin/env Rscript
+
+args <- commandArgs(trailingOnly = TRUE)
+formats <- "all"
+format_arg <- grep("^--formats=", args, value = TRUE)
+if (length(format_arg) == 1L) {
+  formats <- strsplit(sub("^--formats=", "", format_arg), ",", fixed = TRUE)[[1L]]
+}
+
+if (!requireNamespace("paperrepo", quietly = TRUE)) {
+  stop("Install paperrepo before running this script.", call. = FALSE)
+}
+
+paperrepo::render_paper(
+  path = normalizePath(getwd(), winslash = "/", mustWork = TRUE),
+  formats = formats
+)

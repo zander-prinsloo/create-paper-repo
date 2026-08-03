@@ -1,0 +1,14 @@
+# Active notes and to-do list
+
+## Next actions
+
+- [ ] Replace the manuscript metadata in paper.qmd.
+- [ ] Document the raw-data provenance and access conditions.
+- [ ] Implement the ordered scripts in R/.
+- [ ] Add citations to references.bib.
+- [ ] Render PDF, DOCX, and HTML before submission.
+
+## Decisions
+
+Record decisions here while they are active. Archive a dated note when a
+decision is complete or superseded.

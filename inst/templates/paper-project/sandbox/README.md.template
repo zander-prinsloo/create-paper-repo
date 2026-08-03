@@ -1,0 +1,5 @@
+# Sandbox
+
+Use this folder for disposable exploration. Nothing here should be required
+for the final analysis. Once an exploration becomes part of the paper, move the
+stable logic into the numbered scripts in R/.

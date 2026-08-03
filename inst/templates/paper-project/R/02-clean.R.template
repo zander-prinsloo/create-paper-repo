@@ -1,0 +1,6 @@
+# 02 â Clean and construct analysis data
+
+source("R/helpers.R")
+root <- project_root()
+dir.create(file.path(root, "data/processed"), recursive = TRUE, showWarnings = FALSE)
+message("Cleaning step is ready. Add transformations and save derived data here.")

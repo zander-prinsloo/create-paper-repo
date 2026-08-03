@@ -1,0 +1,6 @@
+# Other code
+
+Use this folder for code that is not part of the main R analysis sequence:
+shell commands, Python utilities, Stata do-files, SQL, compiled helpers, or
+small tools used by the project. Every script should state its inputs, outputs,
+and how it is invoked.

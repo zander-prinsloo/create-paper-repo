@@ -1,0 +1,4 @@
+# Manuscript renders
+
+Quarto writes the HTML, DOCX, and PDF versions of the paper here. The latest
+PDF render also refreshes paper.tex at the project root for journal submission.

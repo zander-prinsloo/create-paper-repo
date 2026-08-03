@@ -1,0 +1,12 @@
+# renv
+
+This folder is managed by renv. Do not edit generated activation files by
+hand. If the project was created before renv was installed, run:
+
+~~~r
+install.packages("renv")
+renv::init(".", bare = TRUE)
+renv::restore()
+~~~
+
+After changing R dependencies, run renv::snapshot() and commit renv.lock.

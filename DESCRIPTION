@@ -1,0 +1,20 @@
+Package: paperrepo
+Type: Package
+Title: Create Reproducible Project Structures for Empirical Papers
+Version: 0.1.0
+Author: Zander Prinsloo [aut, cre]
+Maintainer: Zander Prinsloo <62433917+zander-prinsloo@users.noreply.github.com>
+Description: Create a convention-driven, Quarto-first project structure for
+    empirical research papers. The scaffold includes analysis folders,
+    reproducibility files, dated research notes, manuscript rendering helpers,
+    and a journal-ready TeX handoff.
+License: MIT + file LICENSE
+URL: https://github.com/zander-prinsloo/create-paper-repo
+BugReports: https://github.com/zander-prinsloo/create-paper-repo/issues
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests:
+    renv,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

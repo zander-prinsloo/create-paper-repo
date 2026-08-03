@@ -1,0 +1,6 @@
+# Research notes
+
+Keep current tasks and rough decisions in active.md. Use
+paperrepo::archive_note() to create a dated Markdown note in archive/ and add
+it to INDEX.md. Never delete a note just because a decision changed: archive
+the old decision and record the replacement.

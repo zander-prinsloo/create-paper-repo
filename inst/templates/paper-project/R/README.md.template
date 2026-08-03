@@ -1,0 +1,11 @@
+# R analysis scripts
+
+Run scripts in numeric order. Keep each script focused and rerunnable:
+
+1. 01-import.R reads raw data and records the input contract.
+2. 02-clean.R creates analysis-ready data.
+3. 03-analyze.R estimates models and writes machine-readable results.
+4. 04-export.R creates tables and figures used by paper.qmd.
+
+Put reusable functions in helpers.R. Keep exploratory work in sandbox/ until
+it is stable enough to promote here.

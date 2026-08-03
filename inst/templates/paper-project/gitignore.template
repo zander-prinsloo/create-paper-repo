@@ -1,0 +1,16 @@
+# Keep local and generated noise out of version control.
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+.DS_Store
+
+# Keep sensitive or large data out until you have explicitly reviewed it.
+data/raw/*
+!data/raw/README.md
+data/processed/*
+!data/processed/README.md
+
+# Manuscript renders are reproducible but often large; keep the folder itself.
+output/manuscript/*
+!output/manuscript/README.md

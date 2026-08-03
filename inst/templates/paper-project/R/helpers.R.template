@@ -1,0 +1,13 @@
+# Reusable analysis helpers
+
+project_root <- function() {
+  normalizePath(getwd(), winslash = "/", mustWork = TRUE)
+}
+
+ensure_output_dirs <- function(root = project_root()) {
+  dirs <- file.path(
+    root,
+    c("output/results", "output/tables", "output/figures")
+  )
+  invisible(lapply(dirs, dir.create, recursive = TRUE, showWarnings = FALSE))
+}
