@@ -1,0 +1,5 @@
+# Processed data
+
+Store data derived by the numbered scripts in R/ here. Every file should be
+re-creatable from data/raw/ or from a documented external source. Add a short
+description and the script that creates each derived file.

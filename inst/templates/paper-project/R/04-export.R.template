@@ -1,0 +1,6 @@
+# 04 â Export manuscript tables and figures
+
+source("R/helpers.R")
+root <- project_root()
+ensure_output_dirs(root)
+message("Export step is ready. Write tables to output/tables/ and figures to output/figures/.")

@@ -1,0 +1,9 @@
+# Notes index
+
+## How to use this folder
+
+- Put current tasks and open questions in active.md.
+- Archive completed or superseded notes with paperrepo::archive_note().
+- Keep dates in filenames so the project history is sortable and searchable.
+
+## Archived notes

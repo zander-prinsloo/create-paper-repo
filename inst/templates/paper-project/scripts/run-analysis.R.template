@@ -1,0 +1,26 @@
+#!/usr/bin/env Rscript
+
+script_arg <- grep("^--file=", commandArgs(trailingOnly = FALSE), value = TRUE)
+if (length(script_arg) != 1L) {
+  stop("Run this file with Rscript scripts/run-analysis.R.", call. = FALSE)
+}
+
+project_root <- normalizePath(
+  file.path(dirname(sub("^--file=", "", script_arg)), ".."),
+  winslash = "/",
+  mustWork = TRUE
+)
+old_wd <- getwd()
+setwd(project_root)
+on.exit(setwd(old_wd), add = TRUE)
+
+analysis_scripts <- file.path(
+  project_root,
+  "R",
+  c("01-import.R", "02-clean.R", "03-analyze.R", "04-export.R")
+)
+for (script in analysis_scripts) {
+  if (!file.exists(script)) stop("Missing analysis script: ", script, call. = FALSE)
+  message("Running ", basename(script))
+  source(script, local = new.env(parent = globalenv()))
+}

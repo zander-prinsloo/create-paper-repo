@@ -1,0 +1,6 @@
+# 03 â Estimate models and export results
+
+source("R/helpers.R")
+root <- project_root()
+ensure_output_dirs(root)
+message("Analysis step is ready. Write machine-readable results to output/results/.")

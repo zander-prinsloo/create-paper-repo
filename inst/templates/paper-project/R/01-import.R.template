@@ -1,0 +1,8 @@
+# 01 â Import raw data
+#
+# Replace this example with the data import for the paper. Keep raw files
+# unchanged and record their provenance in data/raw/README.md.
+
+source("R/helpers.R")
+root <- project_root()
+message("Import step is ready. Add the raw-data import for {{PROJECT_NAME}}.")

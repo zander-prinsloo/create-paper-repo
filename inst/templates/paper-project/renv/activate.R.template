@@ -1,0 +1,5 @@
+# This lightweight bootstrap is replaced by renv::init() when renv is installed.
+if (!requireNamespace("renv", quietly = TRUE)) {
+  stop("Install renv with install.packages('renv') before activating this project.")
+}
+renv::activate(project = getwd())

@@ -1,0 +1,9 @@
+#!/usr/bin/env Rscript
+
+if (!requireNamespace("paperrepo", quietly = TRUE)) {
+  stop("Install paperrepo before running this script.", call. = FALSE)
+}
+
+check <- paperrepo::check_paper_project(getwd())
+print(check)
+if (!isTRUE(check$ok)) quit(status = 1L)

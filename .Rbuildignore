@@ -1,0 +1,14 @@
+^\.github$
+^\.git$
+^\.gitignore$
+^\.Rproj.user$
+^README\.Rmd$
+^cran-comments\.md$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
+^CITATION\.cff$
+^NEWS\.md$
+^work$
+^\.\.Rcheck$
+^paperrepo\.Rcheck$
+^\.DS_Store$

@@ -1,0 +1,74 @@
+# {{PROJECT_NAME}}
+
+This repository contains the analysis and manuscript for **{{PROJECT_NAME}}**.
+It is organized so that a new collaborator can identify inputs, rerun the
+analysis, inspect the manuscript source, and reproduce the journal handoff.
+
+## Start here
+
+1. Read this file and notes/active.md.
+2. Put a provenance note in data/raw/README.md before adding data.
+3. Add analysis in R/ in numbered execution order.
+4. Run the analysis and write generated artifacts to output/results/,
+   output/tables/, and output/figures/.
+5. Write the manuscript in paper.qmd.
+6. Run the manuscript helper with Rscript scripts/render-paper.R.
+
+## Project map
+
+| Location | Purpose |
+| --- | --- |
+| data/raw/ | Original or received data. Document access and provenance. |
+| data/processed/ | Reproducibly derived analysis data. |
+| R/ | Numbered data, cleaning, estimation, and export scripts. |
+| code/ | Non-R utilities, command-line tools, or supplementary code. |
+| sandbox/ | Disposable exploration. Promote stable work into R/. |
+| notes/active.md | Current tasks, decisions, questions, and handoffs. |
+| notes/archive/ | Dated notes kept for project history. |
+| output/results/ | Machine-readable model results and diagnostics. |
+| output/tables/ | Tables used in the paper or supplement. |
+| output/figures/ | Figures used in the paper or supplement. |
+| output/manuscript/ | Quarto HTML, DOCX, and PDF renders. |
+| paper.qmd | Single source of truth for the manuscript. |
+| paper.tex | TeX copied from the latest PDF render for journal submission. |
+| scripts/run-analysis.R | Runs the numbered R analysis scripts in order. |
+| scripts/render-paper.R | Renders the manuscript in selected formats. |
+| renv.lock | Package versions for reproducible R execution. |
+
+## Rendering
+
+Install Quarto and a LaTeX engine such as TinyTeX. Then run all formats:
+
+~~~sh
+Rscript scripts/run-analysis.R
+Rscript scripts/render-paper.R
+~~~
+
+Or render selected formats:
+
+~~~sh
+Rscript scripts/render-paper.R --formats=pdf,docx
+Rscript scripts/render-paper.R --formats=html
+~~~
+
+The helper runs Quarto from the project root. PDF rendering retains the
+generated TeX and refreshes paper.tex. If the journal requires a specific
+document class, bibliography style, or LaTeX package, update _quarto.yml
+and the manuscript metadata before submission.
+
+## Reproducibility
+
+Run the following after changing dependencies:
+
+~~~r
+renv::snapshot()
+paperrepo::check_paper_project()
+~~~
+
+For a clean handoff, clone this repository into a new directory, run
+renv::restore(), execute the numbered scripts in R/, and render all
+manuscript formats. Record any data-access restrictions in the data README
+files and provide a synthetic or public substitute when raw data cannot be
+redistributed.
+
+Created on {{CREATED_DATE}}.

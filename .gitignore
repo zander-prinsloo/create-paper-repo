@@ -47,3 +47,18 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# R package build/check artifacts
+paperrepo.Rcheck/
+..Rcheck/
+paperrepo_*.tar.gz
+
+# Local package development
+.Rproj.user/
+renv/library/
+renv/staging/
+renv/cache/
+renv/sandbox/
+
+# Local scratch space
+work/

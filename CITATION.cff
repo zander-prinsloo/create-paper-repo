@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "paperrepo: Reproducible Project Structures for Empirical Papers"
+message: "If paperrepo helped your research, please cite this repository."
+type: software
+authors:
+  - family-names: Prinsloo
+    given-names: Zander
+repository-code: "https://github.com/zander-prinsloo/create-paper-repo"
+license: MIT
+version: 0.1.0

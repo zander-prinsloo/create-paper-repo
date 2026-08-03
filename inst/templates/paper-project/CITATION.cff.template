@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "{{PROJECT_NAME}}"
+message: "If you use this research package, please cite the paper and repository."
+type: dataset
+authors:
+  - family-names: "Author"
+    given-names: "Name"
+repository-code: ""
+version: "0.1.0"
+date-released: "{{CREATED_DATE}}"

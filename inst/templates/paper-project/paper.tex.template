@@ -1,0 +1,12 @@
+% This starter file is replaced by the TeX retained during PDF rendering.
+% Run: paperrepo::render_paper(path = ".", formats = "pdf")
+\documentclass{article}
+\title{{{PROJECT_NAME}}}
+\author{Author Name}
+\date{{{CREATED_DATE}}}
+\begin{document}
+\maketitle
+\section{Draft}
+Render paper.qmd with Quarto to replace this starter file with the complete
+journal handoff.
+\end{document}
