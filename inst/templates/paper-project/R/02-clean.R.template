@@ -1,4 +1,4 @@
-# 02 â Clean and construct analysis data
+# 02 — Clean and construct analysis data
 
 source("R/helpers.R")
 root <- project_root()

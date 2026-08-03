@@ -8,6 +8,8 @@
 ^CODE_OF_CONDUCT\.md$
 ^CITATION\.cff$
 ^NEWS\.md$
+^_pkgdown\.yml$
+^docs$
 ^work$
 ^\.\.Rcheck$
 ^paperrepo\.Rcheck$

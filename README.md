@@ -32,27 +32,27 @@ The generated project looks like this:
 
 ~~~text
 my-paper/
-âââ README.md
-âââ _quarto.yml
-âââ paper.qmd
-âââ paper.tex                 # refreshed from the PDF render
-âââ data/
-â   âââ raw/
-â   âââ processed/
-âââ R/                        # ordered analysis scripts
-âââ code/                     # non-R utilities, commands, or notebooks
-âââ sandbox/                  # disposable exploration
-âââ notes/
-â   âââ active.md
-â   âââ INDEX.md
-â   âââ archive/
-âââ output/
-â   âââ manuscript/
-â   âââ results/
-â   âââ tables/
-â   âââ figures/
-âââ scripts/
-âââ renv.lock
+├── README.md
+├── _quarto.yml
+├── paper.qmd
+├── paper.tex                 # refreshed from the PDF render
+├── data/
+│   ├── raw/
+│   └── processed/
+├── R/                        # ordered analysis scripts
+├── code/                     # non-R utilities, commands, or notebooks
+├── sandbox/                  # disposable exploration
+├── notes/
+│   ├── active.md
+│   ├── INDEX.md
+│   └── archive/
+├── output/
+│   ├── manuscript/
+│   ├── results/
+│   ├── tables/
+│   └── figures/
+├── scripts/
+└── renv.lock
 ~~~
 
 ## Render the manuscript
@@ -115,4 +115,4 @@ and will remain conservative while the project matures.
 
 ## License
 
-MIT Â© Zander Prinsloo.
+MIT © Zander Prinsloo.
