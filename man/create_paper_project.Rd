@@ -35,3 +35,13 @@ Creates a Quarto-first project with conventional locations for data,
 analysis code, exploratory work, research notes, manuscript outputs, and
 reproducibility metadata. Existing files are never removed.
 }
+\examples{
+\dontrun{
+project <- file.path(tempdir(), "my-paper")
+create_paper_project(
+  project,
+  project_name = "My empirical paper",
+  init_renv = FALSE
+)
+}
+}

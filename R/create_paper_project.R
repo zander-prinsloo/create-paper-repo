@@ -15,6 +15,15 @@
 #'
 #' @return An object of class "paper_project" containing the project path,
 #'   created files, and renv initialization status.
+#' @examples
+#' \dontrun{
+#' project <- file.path(tempdir(), "my-paper")
+#' create_paper_project(
+#'   project,
+#'   project_name = "My empirical paper",
+#'   init_renv = FALSE
+#' )
+#' }
 #' @export
 create_paper_project <- function(
     path = ".",

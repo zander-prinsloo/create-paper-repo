@@ -14,6 +14,11 @@
 #'
 #' @return An object of class "paperrepo_render" describing the rendered
 #'   formats, output directory, and TeX handoff.
+#' @examples
+#' \dontrun{
+#' render_paper("my-paper", formats = "all")
+#' render_paper("my-paper", formats = c("pdf", "docx"))
+#' }
 #' @export
 render_paper <- function(
     path = ".",

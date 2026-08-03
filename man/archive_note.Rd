@@ -23,3 +23,12 @@ Writes a Markdown note to notes/archive/ and adds a link to
 notes/INDEX.md. This keeps rough ideas and completed decisions searchable
 without mixing them into the active to-do list.
 }
+\examples{
+\dontrun{
+archive_note(
+  title = "Resolve missingness decision",
+  body = "Compare complete-case and weighted estimates.",
+  path = "my-paper"
+)
+}
+}
