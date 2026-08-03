@@ -1,0 +1,92 @@
+---
+title: "Getting started with paperrepo"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting started with paperrepo}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+The paperrepo package creates a consistent, reproducible workspace for an
+empirical research paper. This vignette walks through the main workflow from
+project creation to manuscript rendering and handoff.
+
+## Create a project
+
+Create a fresh directory for each paper. The default scaffold is deliberately
+small enough to understand at a glance, but includes all of the locations
+needed for a complete analysis.
+
+~~~{r create-project, eval=FALSE}
+paperrepo::create_paper_project(
+  path = "my-paper",
+  project_name = "My empirical paper"
+)
+~~~
+
+If renv is not installed, the package writes a starting lockfile and explains
+how to initialize the environment. Once renv is available, run renv::snapshot()
+after adding analysis dependencies.
+
+## Follow the analysis sequence
+
+The generated R directory is intentionally numbered:
+
+1. 01-import.R reads and documents raw inputs.
+2. 02-clean.R creates analysis-ready data.
+3. 03-analyze.R estimates models and writes machine-readable results.
+4. 04-export.R creates tables and figures used by the manuscript.
+
+Run the sequence from the project root:
+
+~~~sh
+Rscript scripts/run-analysis.R
+~~~
+
+Keep exploratory work in sandbox/ until it is stable enough to promote into
+the numbered scripts. Keep non-R utilities in code/.
+
+## Write and render the manuscript
+
+The manuscript source is paper.qmd. Its metadata declares HTML, Word, and PDF
+formats, and PDF output keeps the generated TeX. Render all formats together:
+
+~~~{r render-all, eval=FALSE}
+paperrepo::render_paper("my-paper", formats = "all")
+~~~
+
+Or render a subset:
+
+~~~{r render-selected, eval=FALSE}
+paperrepo::render_paper("my-paper", formats = c("pdf", "docx"))
+paperrepo::render_paper("my-paper", formats = "html")
+~~~
+
+Rendered files go to output/manuscript/. A PDF render refreshes paper.tex at
+the project root, where it can be inspected and supplied to a journal.
+
+## Keep a decision trail
+
+Use notes/active.md for current tasks and open questions. Archive completed or
+superseded decisions with a date:
+
+~~~{r archive-note, eval=FALSE}
+paperrepo::archive_note(
+  title = "Resolve missingness decision",
+  body = "Compare complete-case and weighted estimates.",
+  path = "my-paper"
+)
+~~~
+
+The note is written to notes/archive/ and linked from notes/INDEX.md.
+
+## Validate a handoff
+
+Before sharing the repository, check its structure and rerun the manuscript
+from a clean session:
+
+~~~{r check-project, eval=FALSE}
+paperrepo::check_paper_project("my-paper")
+~~~
+
+The generated README also contains a reproducibility checklist covering data
+provenance, derived files, package snapshots, and journal submission.

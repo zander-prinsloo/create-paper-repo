@@ -1,0 +1,29 @@
+url: https://zander-prinsloo.github.io/create-paper-repo/
+
+template:
+  bootstrap: 5
+  light-switch: true
+
+navbar:
+  structure:
+    left: [reference, articles, news]
+    right: [github]
+  components:
+    github:
+      icon: fa-github
+      href: https://github.com/zander-prinsloo/create-paper-repo
+      aria-label: GitHub repository
+
+reference:
+  - title: Project workflow
+    contents:
+      - create_paper_project
+      - render_paper
+      - archive_note
+      - check_paper_project
+
+articles:
+  - title: Getting started
+    navbar: ~
+    contents:
+      - paperrepo

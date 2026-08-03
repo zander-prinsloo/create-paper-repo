@@ -7,6 +7,10 @@
 #'
 #' @return An object of class "paper_project_check" with one row per required
 #' path and a logical present field.
+#' @examples
+#' \dontrun{
+#' check_paper_project("my-paper")
+#' }
 #' @export
 check_paper_project <- function(path = ".") {
   path <- .normalize_project_path(path, must_exist = TRUE)

@@ -1,4 +1,4 @@
-# 03 â Estimate models and export results
+# 03 — Estimate models and export results
 
 source("R/helpers.R")
 root <- project_root()

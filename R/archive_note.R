@@ -10,6 +10,14 @@
 #' @param date Date to use in the filename and note header. Defaults to today.
 #'
 #' @return The created note path, invisibly.
+#' @examples
+#' \dontrun{
+#' archive_note(
+#'   title = "Resolve missingness decision",
+#'   body = "Compare complete-case and weighted estimates.",
+#'   path = "my-paper"
+#' )
+#' }
 #' @export
 archive_note <- function(
     title,

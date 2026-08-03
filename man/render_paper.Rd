@@ -27,3 +27,9 @@ generated files are placed in output/manuscript/. When PDF is rendered,
 the TeX file retained by Quarto is copied to paper.tex at the project
 root for journal submission.
 }
+\examples{
+\dontrun{
+render_paper("my-paper", formats = "all")
+render_paper("my-paper", formats = c("pdf", "docx"))
+}
+}

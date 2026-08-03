@@ -1,14 +1,16 @@
 citHeader("To cite paperrepo in publications, please cite the software repository.")
 
+package_version <- as.character(utils::packageVersion("paperrepo"))
+
 citEntry(
   entry = "Manual",
   title = "paperrepo: Create Reproducible Project Structures for Empirical Papers",
   author = person("Zander", "Prinsloo"),
   year = "2026",
-  note = "R package version 0.1.0",
+  note = paste("R package version", package_version),
   url = "https://github.com/zander-prinsloo/create-paper-repo",
   textVersion = paste(
     "Prinsloo, Z. (2026). paperrepo: Create Reproducible Project Structures",
-    "for Empirical Papers. R package version 0.1.0."
+    "for Empirical Papers. R package version", package_version, "."
   )
 )

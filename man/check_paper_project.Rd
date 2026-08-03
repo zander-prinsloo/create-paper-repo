@@ -17,3 +17,8 @@ path and a logical present field.
 Checks that the generated project contains the folders and files needed for
 the paperrepo workflow.
 }
+\examples{
+\dontrun{
+check_paper_project("my-paper")
+}
+}

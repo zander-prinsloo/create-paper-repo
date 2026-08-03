@@ -1,4 +1,4 @@
-# 04 â Export manuscript tables and figures
+# 04 — Export manuscript tables and figures
 
 source("R/helpers.R")
 root <- project_root()
