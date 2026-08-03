@@ -1,5 +1,10 @@
 # paperrepo
 
+[![R-CMD-check](https://github.com/zander-prinsloo/create-paper-repo/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/zander-prinsloo/create-paper-repo/actions/workflows/R-CMD-check.yaml)
+[![pkgdown](https://github.com/zander-prinsloo/create-paper-repo/actions/workflows/pkgdown.yaml/badge.svg)](https://github.com/zander-prinsloo/create-paper-repo/actions/workflows/pkgdown.yaml)
+
+Documentation: <https://zander-prinsloo.github.io/create-paper-repo/>
+
 paperrepo creates a clear, reproducible workspace for an empirical research
 paper. It is designed for authors who want one repository to carry a project
 from raw data and exploratory work through analysis, manuscript writing,
@@ -24,40 +29,40 @@ paperrepo::create_paper_project("my-paper", project_name = "My empirical paper")
 ~~~
 
 If renv is not installed yet, install it and run the command again, or run
-renv::init("my-paper", bare = TRUE) after creating the scaffold. The
-scaffold still includes a valid starting lockfile and instructions when the
-optional renv package is unavailable.
+renv::init("my-paper", bare = TRUE) after creating the scaffold. The scaffold
+still includes a valid starting lockfile and instructions when the optional
+renv package is unavailable.
 
 The generated project looks like this:
 
 ~~~text
 my-paper/
-├── README.md
-├── _quarto.yml
-├── paper.qmd
-├── paper.tex                 # refreshed from the PDF render
-├── data/
-│   ├── raw/
-│   └── processed/
-├── R/                        # ordered analysis scripts
-├── code/                     # non-R utilities, commands, or notebooks
-├── sandbox/                  # disposable exploration
-├── notes/
-│   ├── active.md
-│   ├── INDEX.md
-│   └── archive/
-├── output/
-│   ├── manuscript/
-│   ├── results/
-│   ├── tables/
-│   └── figures/
-├── scripts/
-└── renv.lock
+|-- README.md
+|-- _quarto.yml
+|-- paper.qmd
+|-- paper.tex                 # refreshed from the PDF render
+|-- data/
+|   |-- raw/
+|   |-- processed/
+|-- R/                         # ordered analysis scripts
+|-- code/                      # non-R utilities, commands, or notebooks
+|-- sandbox/                   # disposable exploration
+|-- notes/
+|   |-- active.md
+|   |-- INDEX.md
+|   |-- archive/
+|-- output/
+|   |-- manuscript/
+|   |-- results/
+|   |-- tables/
+|   |-- figures/
+|-- scripts/
+|-- renv.lock
 ~~~
 
 ## Render the manuscript
 
-Install Quarto (https://quarto.org/docs/get-started/) and a PDF engine such
+Install [Quarto](https://quarto.org/docs/get-started/) and a PDF engine such
 as TinyTeX before rendering. From the paper project, either render all three
 formats together:
 
@@ -97,7 +102,7 @@ paperrepo::archive_note(
 
 ## Reproducibility checklist
 
-Before sharing the repository, run the checks in the generated README:
+Before sharing the repository:
 
 1. Put immutable or legally shareable inputs in data/raw/ and document their
    provenance.
@@ -115,4 +120,4 @@ and will remain conservative while the project matures.
 
 ## License
 
-MIT © Zander Prinsloo.
+MIT (c) Zander Prinsloo.
